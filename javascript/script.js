@@ -22,6 +22,12 @@ function create_image_array() {
     img4.src = "images/pic4.jpg";
     img5.src = "images/pic5.jpg";
 
+    img1.id = 'pic1';
+    img2.id = 'pic2';
+    img3.id = 'pic3';
+    img4.id = 'pic4';
+    img5.id = 'pic5';
+
     return [img1, img2, img3, img4, img5];
 }
 
@@ -34,7 +40,16 @@ function add_images_to_thumb_bar() {
     }
 }
 
+function mouse_over_listener(source) {
+    if (source.target.id != "thumb-bar") {
+        var big_img = document.getElementsByClassName("displayed-img")[0];
+        big_img.src = "images/" + source.target.id + ".jpg";
+    }
+}
+
 function page_load() {
     hide_form_elements();
     add_images_to_thumb_bar();
+    var thumb_bar = document.getElementById("thumb-bar");
+    thumb_bar.addEventListener('mouseover', mouse_over_listener);
 }
