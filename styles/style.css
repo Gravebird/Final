@@ -1,3 +1,82 @@
 div img {
     width: 20%;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+@media screen and (min-width: 640px) {
+    body {
+        width: 640px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    label {
+        margin: 10px;
+    }
+    
+    input {
+        margin: 10px
+    }
+    
+    button {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        width: 80%;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    img {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    label {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button {
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
