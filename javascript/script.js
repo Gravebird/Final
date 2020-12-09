@@ -9,6 +9,16 @@ function hide_form_elements() {
     button.style.display = "none";
 }
 
+function show_form_elements() {
+    var label = document.getElementsByTagName("label")[0];
+    var input_area = document.getElementsByTagName("input")[0];
+    var button = document.getElementsByTagName("button")[0];
+
+    label.style.display = "block";
+    input_area.style.display = "block";
+    button.style.display = "block";
+}
+
 function create_image_array() {
     var img1 = document.createElement("img");
     var img2 = document.createElement("img");
@@ -42,6 +52,7 @@ function add_images_to_thumb_bar() {
 
 function mouse_over_listener(source) {
     if (source.target.id != "thumb-bar") {
+        show_form_elements();
         var big_img = document.getElementsByClassName("displayed-img")[0];
         big_img.src = "images/" + source.target.id + ".jpg";
     }
