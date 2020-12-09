@@ -64,3 +64,18 @@ function page_load() {
     var thumb_bar = document.getElementById("thumb-bar");
     thumb_bar.addEventListener('mouseover', mouse_over_listener);
 }
+
+function submit_clicked() {
+    var input_area = document.getElementsByTagName("input")[0];
+    var user_input = input_area.value;
+    input_area.value = "";
+
+    if (user_input == "blur") {
+        var big_img = document.getElementsByClassName("displayed-img")[0];
+        var newsrc = big_img.src.slice(0, -4);
+        big_img.src = newsrc + "B.jpg";
+    }
+    else {
+        alert("Error: Invalid input");
+    }
+}
